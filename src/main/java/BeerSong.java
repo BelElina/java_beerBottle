@@ -1,4 +1,4 @@
-public class beerSong {
+public class BeerSong {
 
     public static void main(String[] args) {
         int beerNum = 99;
@@ -13,7 +13,6 @@ public class beerSong {
             if (beerNum == 1) {
                 word = "bottle";
             }
-
             if (beerNum > 0) {
                 System.out.println(beerNum + " " + word + " of beer on the wall.");
             }
