@@ -1,3 +1,5 @@
+package GuessGame;
+
 public class GuessGame {
     // 3 переменные экземпляра для трех объектов Player
     Player p1;
@@ -11,9 +13,9 @@ public class GuessGame {
         p3 = new Player();
 
         // Объявляем 3 переменные для хранения вариантов от каждого игрока
-        int guess1 = 0;
-        int guess2 = 0;
-        int guess3 = 0;
+        int guessp1 = 0;
+        int guessp2 = 0;
+        int guessp3 = 0;
 
         // Объявляем 3 переменные для хранения правильности или неправильности ответов игроков
         boolean p1isRight = false;
@@ -36,10 +38,10 @@ public class GuessGame {
             guessp1 = p1.number;
             System.out.println("Первый игрок думает, что это - " + guessp1);
 
-            guessp2 = p1.number;
+            guessp2 = p2.number;
             System.out.println("Первый игрок думает, что это - " + guessp2);
 
-            guessp3 = p1.number;
+            guessp3 = p3.number;
             System.out.println("Первый игрок думает, что это - " + guessp3);
 
             // Проверяем варианты каждого из игроков на соответствие загадонному числу.
@@ -57,15 +59,16 @@ public class GuessGame {
             // Если первый игрок, ИЛИ второй игрок, ИЛИ третий игрок угадал...
             if (p1isRight || p2isRight || p3isRight) {
                 System.out.println("У нас есть победитель!");
-                System.out.println("Первый игрок угадал?" + p1isRight);
-                System.out.println("Второй игрок угадал?" + p2isRight);
-                System.out.println("Третий игрок угадал?" + p3isRight);
+                System.out.println("Первый игрок угадал? " + p1isRight);
+                System.out.println("Второй игрок угадал? " + p2isRight);
+                System.out.println("Третий игрок угадал? " + p3isRight);
                 System.out.println("Конец игры!");
                 break;
             } else {
                 // Иначе остаемся в цикле и просим игроков сделать еще одну попытку
-                System.out.println("Игроки должны попробовтаь еще раз.");
+                System.out.println("игроки должны попробовтаь еще раз.");
             }
         }
     }
 }
+
